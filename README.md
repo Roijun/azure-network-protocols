@@ -67,7 +67,21 @@ We'll keep things consistent and re-enable our account, and then proceed to atte
 
 - Observing Logs
 
-Now that we've completed the main portion of the walkthrough and tested with various aspects of account accessibility, the only thing we have left to do is to view our active directory logs showing some of the process which we just went through. To find our logs we're going to use our dc-1 machine and search in the bottom left for our 'eventvwr'. Once inside the eventvwr window we want to open the dropdown menu for 'Windows Logs', and select 'Security'
+Now that we've completed the main portion of the walkthrough and tested with various aspects of account accessibility, the only thing we have left to do is to view our active directory logs showing a portion of the process which we just went through. To find our logs we're going to use our client-1 machine and search in the bottom left for our 'eventvwr'. Run it as an administrator, once inside the eventvwr window we'll have to use our jane admin credentials to allow us access to the logs. Next we want to open the dropdown menu for 'Windows Logs', and select 'Security'.
+
+![eventvwr](https://github.com/user-attachments/assets/278d4bd6-f040-4364-bfcc-27ab5167c64c)
+
+If we right click our security log and click on 'Find' we can search using our users name to find all logs associated with that name. It's an easy way to find what we're looking for. 
+
+![auditfailure](https://github.com/user-attachments/assets/464e456c-048d-44e7-b8b1-b53d1c069bc0)
+
+We'll hit next until we come across a series of audit failures back to back under the name of our user. These represent our earlier actions when we were attempting to lock out our account by incorrectly typing in our password over and over. The logs within eventvwr can provide a lot of insight to employees who are potentially trying to solve IT related issues. 
+
+![auditfailure](https://github.com/user-attachments/assets/e2cf94f6-9714-4761-8d49-02f631ea03f0)
+
+This concludes our walkthrough navigating the Active Directory system. If you've never dealt with active directory before this guide should have at least built a foundational layer of familiarity and understanding around what active directory does and why it's an important tool for IT professionals. 
+
+
 
 
 
